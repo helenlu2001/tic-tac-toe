@@ -1,0 +1,33 @@
+.Game-cont {
+    margin: 0 auto;
+    width: 618px;
+    height: 618px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.Game-button {
+    padding: 8px;
+  
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+  
+    width: 200px;
+    border: black 2px solid; 
+    border-radius: 16px;
+
+    background: rgb(255, 169, 226);
+
+  }
+
+  .Game-button:hover {
+      background: rgb(255, 199, 236);
+  }
+
+  .Game-buttonText {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  

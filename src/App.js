@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import {socket} from './client-socket.js';
+import Game from './Game.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: 'Tic-Tac-Toe with Sockets',
+    }
+    this.changeText = this.changeText.bind(this);
+  }
+
+  componentDidMount() {
+
+  }
+
+  changeText(text) {
+    this.setState({text: text});
+  }
+
+  render() {
+    return (
+      <>
+        <div className="App-container"> 
+          <div className='App-title'> {this.state.text} </div>
+          <Game changeText={this.changeText}/> 
+        </div>
+      </>
+    );
+  }
 }
+
+
+  
 
 export default App;
